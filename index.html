@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,23 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
-<body>
-    <body>
-		<div id="app">
-			<h1 @click="fetchMail">{{ mail }}</h1>
-            
-            
-        
 
-		<script src="./js/app.js"></script>
-	</body>
-    
+<body>
+
+    <body>
+        <div id="app">
+            <h1>Lista email</h1>
+            <button @click="fetchMail">{{ mail }}</button>
+            <ul>
+                <li v-for="(mail, index) in mails" :key="index">{{ mail }}</li>
+            </ul>
+
+
+
+
+            <script src="./js/app.js"></script>
+    </body>
+
 </body>
+
 </html>
